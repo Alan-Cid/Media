@@ -40,10 +40,10 @@ class Media {
         System.out.println("Nota 2: " + nota2);
         System.out.println("Nota 3: " + nota3);
 
+        double media = (nota1 + nota2 + nota3) / 3.0;
+
+        System.out.printf("Média: %.2f%n", media);
+
         sc.close();
-    }
-}
-
-
     }
 }
