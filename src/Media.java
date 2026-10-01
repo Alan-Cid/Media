@@ -6,7 +6,7 @@ class Media {
 
         Scanner sc = new Scanner(System.in);
 
-        double somaMedias = 0;
+        float somaMedias = 0;
 
         System.out.println("=================================");
         System.out.println("       PROGRAMA DE MÉDIA");
@@ -17,16 +17,34 @@ class Media {
             System.out.println();
             System.out.println("----------- ALUNO " + aluno + " -----------");
 
-            System.out.print("Digite a primeira nota: ");
-            byte nota1 = sc.nextByte();
+            System.out.print("Digite a primeira nota (0,0 a 10,0): ");
+            float nota1 = sc.nextFloat();
 
-            System.out.print("Digite a segunda nota: ");
-            byte nota2 = sc.nextByte();
+            while (nota1 < 0 || nota1 > 10) {
+                System.out.println("Nota inválida! Digite uma nota entre 0,0 e 10,0.");
+                System.out.print("Digite novamente a primeira nota: ");
+                nota1 = sc.nextFloat();
+            }
 
-            System.out.print("Digite a terceira nota: ");
-            byte nota3 = sc.nextByte();
+            System.out.print("Digite a segunda nota (0,0 a 10,0): ");
+            float nota2 = sc.nextFloat();
 
-            double media = (nota1 + nota2 + nota3) / 3.0;
+            while (nota2 < 0 || nota2 > 10) {
+                System.out.println("Nota inválida! Digite uma nota entre 0,0 e 10,0.");
+                System.out.print("Digite novamente a segunda nota: ");
+                nota2 = sc.nextFloat();
+            }
+
+            System.out.print("Digite a terceira nota (0,0 a 10,0): ");
+            float nota3 = sc.nextFloat();
+
+            while (nota3 < 0 || nota3 > 10) {
+                System.out.println("Nota inválida! Digite uma nota entre 0,0 e 10,0.");
+                System.out.print("Digite novamente a terceira nota: ");
+                nota3 = sc.nextFloat();
+            }
+
+            float media = (nota1 + nota2 + nota3) / 3;
 
             somaMedias = somaMedias + media;
 
@@ -41,7 +59,7 @@ class Media {
             }
         }
 
-        double mediaTurma = somaMedias / 5;
+        float mediaTurma = somaMedias / 5;
 
         System.out.println();
         System.out.println("=================================");
