@@ -44,6 +44,14 @@ class Media {
 
         System.out.printf("Média: %.2f%n", media);
 
+        if (media >= 7) {
+            System.out.println("Resultado: Aprovado");
+        } else if (media >= 5) {
+            System.out.println("Resultado: Recuperação");
+        } else {
+            System.out.println("Resultado: Reprovado");
+        }
+
         sc.close();
     }
 }
