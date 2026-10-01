@@ -10,6 +10,8 @@ class Media {
         System.out.println("       PROGRAMA DE MÉDIA");
         System.out.println("=================================");
 
+        for (int aluno = 1; aluno <= 5; aluno++) {
+
         System.out.println();
         System.out.println("Este programa calcula");
         System.out.println("a média e a situação dos alunos.");
